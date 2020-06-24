@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* 背景设置 */
+#fly-bird{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-image: url("../images/sky.png");
+}
+/* 小鸟 */
+.bird{
+    position: absolute;
+    left: 50%;
+    margin-left: -15px;
+    top: 235px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/birds.png");
+}
+/* 开始游戏 */
+.start{
+    position: absolute;
+    left: 50%;
+    top: 295px;
+    margin-left: -100px;
+    width: 200px;
+    height: 60px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 60px;
+}
+/* 开始游戏初始样式 */
+.start.blue{
+    font-size: 36px;
+    color: #09f;
+}
+/* 开始游戏过渡样式 */
+.start.white{
+    font-size: 24px;
+    color: #fff;
+}
+/* 得分样式 */
+.score{
+    font-size: 24px;
+    font-weight: bolder;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    /* 在没有宽度的情况下以自身宽度的50%向X轴反方向运动 */
+    transform: translateX(-50%);
+}
+/* 朦层样式 */
+/* 在元素没有宽高情况下定位使离父级各边距离为0时可撑满父级 */
+.mask{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.7;
+}
+/* 游戏结束 */
+.end{
+    position: absolute;
+    left: 50%;
+    top: 70px;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.end .over{
+    color: red;
+    font-size: 35px;
+    font-weight: bolder;
+}
+.end .result,
+.end .final-score{
+    color: #ff0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.end .rank-list{
+    margin-top: 20px;
+    color: #09f;
+    text-align: left;
+}
+.end .rank-item{
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    font-size: 13px;
+}
+.end .rank{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+    background-color: #8ed9f5;
+    color: #fff;
+    font-size: 12px;
+    margin-right: 10px;
+}
+.end .rank.first{
+    background-color: #f54545;
+}
+.end .rank.second{
+    background-color: #ff8547;
+}
+.end .rank.third{
+    background-color: #ffac38;
+}
+.end .rank-score{
+    width: 30px;
+    display: inline-block;
+}
+/* 重新开始 */
+.end .restart{
+    color: #09f;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
