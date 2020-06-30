@@ -18,6 +18,8 @@
     width: 30px;
     height: 30px;
     background-image: url("../images/birds.png");
+    /* animation: birdFly 1s linear 2s infinite alternate; */
+    transition: top 0.3s linear;
 }
 /* 开始游戏 */
 .start{
@@ -30,6 +32,8 @@
     font-weight: bolder;
     text-align: center;
     line-height: 60px;
+    transition: all 0.3s linear;
+    cursor: pointer;
 }
 /* 开始游戏初始样式 */
 .start.blue{
@@ -50,6 +54,7 @@
     left: 50%;
     /* 在没有宽度的情况下以自身宽度的50%向X轴反方向运动 */
     transform: translateX(-50%);
+    display: none;
 }
 /* 朦层样式 */
 /* 在元素没有宽高情况下定位使离父级各边距离为0时可撑满父级 */
@@ -61,6 +66,7 @@
     bottom: 0;
     background-color: #000;
     opacity: 0.7;
+    display: none;
 }
 /* 游戏结束 */
 .end{
@@ -69,6 +75,7 @@
     top: 70px;
     transform: translateX(-50%);
     text-align: center;
+    display: none;
 }
 .end .over{
     color: red;
@@ -124,6 +131,14 @@
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
-
 }
+/* @keyframes birdFly
+{
+    50% {
+        background-position: -30px 0;
+    }
+    100%{
+        background-position: -60px 0;
+    }
+} */
 
